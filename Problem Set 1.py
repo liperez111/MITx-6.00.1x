@@ -66,8 +66,7 @@ for i in range(0, len(s) - 1):
             y = s[i + 1]
 print("Longest substring in alphabetical order is: " + str(longest))
 
-# this is a testings
-
+#testing
 
 
 
