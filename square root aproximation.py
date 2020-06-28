@@ -13,4 +13,4 @@ def square(y):
     return guess
 
 
-print(square(100))
+print(square(54))
