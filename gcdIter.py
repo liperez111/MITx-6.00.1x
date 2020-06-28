@@ -6,5 +6,3 @@ def gcdIter(a, b):
             break
         else:
             n -= 1
-            
-print(gcdIter(7,12))
