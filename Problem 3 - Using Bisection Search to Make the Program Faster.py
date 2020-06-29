@@ -26,11 +26,12 @@ Note that if you do not use bisection search, your code will not run - your code
 
 
 balance = 320000
-mir = .2 / 12
-b= 1000
+annualInterestRate = .2
+mir = annualInterestRate/12
+b = 1000
 n = 0
 lo = balance / 12
-up = (balance*(1+ mir)**12)/12
+up = (balance*(1 + annualInterestRate/12)**12)/12
 c = 1000
 
 while abs(b-0) > .00001:
@@ -39,7 +40,7 @@ while abs(b-0) > .00001:
     b = balance
     while n < 12:
         b = b - ip
-        b = b + mir * b
+        b = b + annualInterestRate/12 * b
         n += 1
     n = 0
 
@@ -49,7 +50,7 @@ while abs(b-0) > .00001:
         lo = ip
 
 
-print(round(ip,2))
+print("Lowest Payment: " + str(round(ip,2)))
 
 
 
