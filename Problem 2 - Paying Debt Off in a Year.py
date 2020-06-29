@@ -7,7 +7,7 @@ ip = 10
 
 while b > 0:
 
-    ip += 10
+    ip += .01
     b= balance
     while n < 12:
         b = b - ip
