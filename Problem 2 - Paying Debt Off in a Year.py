@@ -19,21 +19,26 @@ Monthly unpaid balance = (Previous balance) - (Minimum fixed monthly payment)
 Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
 '''
 
-b = balance = 3926
-mir = .2 / 12
+balance = 4883
+b=1000
+annualInterestRate = .15
+
 
 n = 0
-ip = 10
+ip = 0
 
 
-while b > 0:
+while b >= 0:
 
-    ip += .01
+    ip += 10
     b= balance
     while n < 12:
-        b = b - ip
-        b = b + mir*b
-        n += 1
+        if balance >= 0:
+            b = b - ip
+            b = b + (annualInterestRate/12)*b
+            n += 1
+        else:
+            break
     n = 0
 
-print(ip)
+print("Lowest Payment: " + str(ip))
