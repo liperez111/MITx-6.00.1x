@@ -1,16 +1,18 @@
 def isWordGuessed(secretWord, lettersGuessed):
     n = 0
-    for i in lettersGuessed:
-        if i in secretWord:
+
+    for i in secretWord:
+        if i in lettersGuessed:
             n += 1
             if n == len(secretWord):
                 return True
                 break
+        elif n != len(secretWord):
+            return False
 
 
 
-
-secretWord = 'aple'
-lettersGuessed = ['e', 'i', 'k', 'p','a','r','l', 's']
+secretWord = 'durian'
+lettersGuessed = ['h', 'a', 'c', 'd', 'i', 'm', 'n', 'r', 't', 'u']
 
 print(isWordGuessed(secretWord,lettersGuessed))
